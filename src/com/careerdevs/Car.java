@@ -3,11 +3,14 @@ package com.careerdevs;
 public class Car {
     private String make;
     private String model;
+    private String licensePlate;
     private int year;
+
 // Car Class Constructor
-    public Car(String make,String model,int year){
+    public Car(String make,String model,String licensePlate,int year){
         this.make = make;
         this.model = model;
+        this.licensePlate = licensePlate;
         this.year = year;
     }
     /*
@@ -40,12 +43,28 @@ public class Car {
         this.model = model;
     }
 
+    public String getLicensePlate () {
+        return licensePlate;
+    }
+
+    public String setLicensePlate () {
+        this.licensePlate = licensePlate;
+    }
+
     public int getYear() {
         return year;
     }
 
     public void setYear(int year) {
         this.year = year;
+    }
+
+    @Override
+        public String toString() {
+        return "make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", year='" + year + '\'' +
+                ", licensePlate'"+ licensePlate;
     }
 }
 
