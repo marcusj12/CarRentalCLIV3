@@ -38,14 +38,20 @@ public class Dealership {
     public void setSoldCars(List<Car>soldCars) {
         this.soldCars = soldCars;
     }
-
+/*
+What is the Override/toString method? What is its purpose and functionality?
+ */
     @Override
     public String toString(){
         return "dealershipName='" + dealershipName + '\'' +
                 ", availableCars='" + availableCars + '\'' +
                 ", soldCars='" + soldCars;
     }
+/*
+The loop below is programmatically allowing users to select a car. Upon selection the car is added to the sold car array &
+    removed from the available cars - demon
 
+ */
     public void buyCar(String license) {
         for (int i =0; i < availableCars.size(); i++) {
             if (license.equals(availableCars.get(i).getLicensePlate())) {
@@ -55,6 +61,9 @@ public class Dealership {
             }
         }
     }
+    /* The loop below is the inverse of the loop above. The loop mimics a user returning a vehicle and it being added back
+    to the available arrays
+   */
     public void returnCar(String license) {
         for (int i = 0; i < soldCars.size(); i++) {
             if (license.equals(soldCars.get(i).getLicensePlate())) {
@@ -64,6 +73,9 @@ public class Dealership {
             }
         }
     }
+    /*
+
+     */
     public void displayInventory() {
         for (int i =0; i <availableCars.size(); i++){
             System.out.println(availableCars.get(i));
