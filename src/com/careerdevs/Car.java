@@ -66,4 +66,6 @@ public class Car {
     Essentially losing control over data---- thus compromising fundamental OOp principle encapsulation.--- since anyone can
     can change the non-private fields outside the class directly... thus we can not achieve immutability**
     In order to modify data we have to make sure we go through a system of checks and balances.
+    Static methods mean its not going to change regardless of the specific instance; if its not static it can change
+    void - doesn't return anything. ; if you want to return something it cannot be void
      */

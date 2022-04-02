@@ -7,9 +7,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-       System.out.println("What is your name?");
+       System.out.println("What would you like to do?");
        String userInput = scan.nextLine();
-       System.out.println("What car would you like to rent?");
+       System.out.println("What car would you like to rent, based off of license plate?");
 
 
        Car rental1 = new Car("Honda", "Accord", "TW564",2018);
@@ -26,12 +26,16 @@ public class Main {
        dealership1.getAvailableCars().add(rental5);
 
         //System.out.println(dealership1.getAvailableCars());
+
+//        for (int i =0; i < dealership1.getAvailableCars().size();i++){
+//            System.out.println(dealership1.getAvailableCars().get(i));
+//        }
         dealership1.displayInventory();
         String userInput1 = scan.nextLine();
         dealership1.buyCar(userInput1);
 
-        System.out.println("Thank you for renting with " + " "+  dealership1.getDealershipName() + "," + " " + "we hope you enjoy your rental experience in our "+ dealership1.getSoldCars());
-        System.out.println(dealership1.getSoldCars());
+
+        System.out.println("Thank you for renting with" + " "+  dealership1.getDealershipName() + "," + " " + "we hope you enjoy your rental experience in our "+ dealership1.getSoldCars());
 
        }
 
